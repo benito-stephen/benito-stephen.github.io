@@ -5,34 +5,154 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Benito Stephen R | AI Portfolio</title>
 
+<meta name="description" content="Benito Stephen R - AI & Data Science Portfolio">
+
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1055/1055687.png">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
 <style>
-body { margin:0; font-family:'Poppins'; background:#020617; color:#e2e8f0; }
-#particles-js { position:fixed; width:100%; height:100%; z-index:-1; }
-header { text-align:center; padding:100px 20px; }
-.btn { margin:10px; padding:12px 22px; border-radius:30px; background:#38bdf8; color:black; text-decoration:none; }
-section { padding:60px 20px; max-width:1100px; margin:auto; }
-.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px; }
-.card { background:#0f172a; padding:20px; border-radius:15px; }
-#chatbot { position:fixed; bottom:20px; right:20px; width:300px; background:#0f172a; border-radius:15px; }
-#chat-body { height:200px; overflow:auto; padding:10px; }
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #020617;
+  color: #e2e8f0;
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+header {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.btn {
+  margin: 10px;
+  padding: 12px 22px;
+  border-radius: 30px;
+  background: #38bdf8;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #38bdf8;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2 {
+  color: #38bdf8;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #0f172a;
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid #1e293b;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(56,189,248,0.4);
+}
+
+/* Chatbot */
+#chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 320px;
+  background: #0f172a;
+  border-radius: 15px;
+  border: 1px solid #1e293b;
+}
+
+#chat-header {
+  background: #38bdf8;
+  color: black;
+  padding: 10px;
+  font-weight: bold;
+}
+
+#chat-body {
+  height: 220px;
+  overflow-y: auto;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+#chat-input {
+  display: flex;
+}
+
+#chat-input input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  outline: none;
+}
+
+#chat-input button {
+  background: #38bdf8;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #64748b;
+}
 </style>
 </head>
 
 <body>
+
 <div id="particles-js"></div>
 
 <header>
-<h1>Benito Stephen R</h1>
-<p>AI & Data Science Enthusiast</p>
+  <h1>Benito Stephen R</h1>
+  <p>AI & Data Science Enthusiast</p>
 
-<a class="btn" href="https://github.com/benito-stephen" target="_blank">GitHub</a>
-<a class="btn" href="https://www.linkedin.com/in/benito-stephen-r-7983952a8" target="_blank">LinkedIn</a>
-<a class="btn" href="https://drive.google.com/file/d/1n1Ds3VyoWpYjAAOwV4doOue-8CvecdBQ/view" target="_blank">Resume</a>
+  <a class="btn" href="https://github.com/benito-stephen" target="_blank">GitHub</a>
+  <a class="btn" href="https://www.linkedin.com/in/benito-stephen-r-7983952a8" target="_blank">LinkedIn</a>
+  <a class="btn" href="https://drive.google.com/file/d/1n1Ds3VyoWpYjAAOwV4doOue-8CvecdBQ/view" target="_blank">Resume</a>
 </header>
+
+<section>
+<h2>About Me</h2>
+<p>
+ECE student passionate about Artificial Intelligence, Data Science, and IoT.
+I build intelligent systems and solve real-world problems using machine learning.
+</p>
+</section>
 
 <section>
 <h2>Projects</h2>
@@ -40,62 +160,109 @@ section { padding:60px 20px; max-width:1100px; margin:auto; }
 
 <div class="card">
 <h3>AIFlix 2.0</h3>
-<a href="https://github.com/benito-stephen/AIFlix-2.0" target="_blank">View</a>
+<p>ML-based recommendation system based on user mood.</p>
+<a href="https://github.com/benito-stephen/AIFlix-2.0" target="_blank">View GitHub</a>
 </div>
 
 <div class="card">
 <h3>Air Pollution Prediction</h3>
-<a href="https://github.com/mackshema/pollution_prediction" target="_blank">View</a>
+<p>Machine learning model to predict air pollution levels.</p>
+<a href="https://github.com/mackshema/pollution_prediction" target="_blank">View GitHub</a>
 </div>
 
 </div>
 </section>
 
 <section>
-<h2>Skills</h2>
+<h2>Skills Overview</h2>
 <canvas id="skillsChart"></canvas>
 </section>
 
+<section>
+<h2>GitHub Stats</h2>
+<img src="https://github-readme-stats.vercel.app/api?username=benito-stephen&show_icons=true&theme=tokyonight" width="100%">
+</section>
+
+<section>
+<h2>Certifications</h2>
+<div class="grid">
+
+<div class="card">
+<a href="https://drive.google.com/file/d/1nyshjCDEJc63ptHyiHfykrc8d27NK4OD/view" target="_blank">NPTEL IoT – Elite + Silver</a>
+</div>
+
+<div class="card">
+<a href="https://drive.google.com/file/d/1AypvHffkghhgPTJx27FzmpRcg7g7Tboe/view" target="_blank">NPTEL Cloud Computing – Elite</a>
+</div>
+
+<div class="card">
+<a href="https://drive.google.com/file/d/1JLUoJZKu64369phfVHTrHyGJ23CHvXt9/view" target="_blank">Python for Data Science – SRM</a>
+</div>
+
+<div class="card">
+<a href="https://drive.google.com/file/d/1THkpqgsMK9fkVl9GFH_-ms8RvFuMedaP/view" target="_blank">GATE 2026 Scorecard</a>
+</div>
+
+<div class="card">
+<a href="https://drive.google.com/file/d/13HLXsNqLvD9SGfDrdUDlCzIRYuMwzf34/view" target="_blank">Additional Certificate</a>
+</div>
+
+</div>
+</section>
+
+<footer>
+<p>© 2026 Benito Stephen R | Jarvis Mode 🤖</p>
+</footer>
+
+<!-- Chatbot -->
 <div id="chatbot">
-<div style="background:#38bdf8;color:black;padding:10px;">Jarvis AI</div>
+<div id="chat-header">Jarvis AI</div>
 <div id="chat-body"></div>
-<input id="userInput" placeholder="Ask me anything..." style="width:70%">
+<div id="chat-input">
+<input type="text" id="userInput" placeholder="Ask about me...">
 <button onclick="sendMessage()">Send</button>
+</div>
 </div>
 
 <script>
 // particles
-particlesJS("particles-js",{particles:{number:{value:60},size:{value:3}}});
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80 },
+    size: { value: 3 }
+  }
+});
 
 // chart
-new Chart(document.getElementById('skillsChart'),{
-type:'bar',
-data:{labels:['Python','ML','Data','IoT'],datasets:[{data:[90,80,85,75]}]}
+new Chart(document.getElementById('skillsChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Python', 'ML', 'Data Analysis', 'IoT'],
+    datasets: [{
+      label: 'Skill Level',
+      data: [90, 80, 85, 75]
+    }]
+  }
 });
 
-// 🔥 REAL AI CHATBOT
-async function sendMessage(){
-let input=document.getElementById("userInput").value;
-let chat=document.getElementById("chat-body");
+// Safe Jarvis
+function sendMessage() {
+  let input = document.getElementById("userInput").value;
+  let chat = document.getElementById("chat-body");
 
-chat.innerHTML += "<p><b>You:</b> "+input+"</p>";
+  let response = "I am Benito's AI assistant 🤖";
 
-let response=await fetch("https://api.openai.com/v1/chat/completions",{
-method:"POST",
-headers:{
-"Content-Type":"application/json",
-"Authorization":"Bearer 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"
-},
-body:JSON.stringify({
-model:"gpt-4o-mini",
-messages:[{role:"user",content:input}]
-})
-});
+  if (input.toLowerCase().includes("project"))
+    response = "Check the Projects section above!";
+  else if (input.toLowerCase().includes("skills"))
+    response = "Python, Machine Learning, Data Analysis, IoT";
+  else if (input.toLowerCase().includes("resume"))
+    response = "Use the Resume button at the top.";
+  else if (input.toLowerCase().includes("contact"))
+    response = "Connect via LinkedIn or GitHub.";
 
-let data=await response.json();
-let reply=data.choices[0].message.content;
-
-chat.innerHTML += "<p><b>Jarvis:</b> "+reply+"</p>";
+  chat.innerHTML += "<p><b>You:</b> " + input + "</p>";
+  chat.innerHTML += "<p><b>Jarvis:</b> " + response + "</p>";
 }
 </script>
 

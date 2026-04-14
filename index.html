@@ -1,47 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Benito Stephen R | AI Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Benito Stephen R | AI Portfolio</title>
 
-  <meta name="description" content="Benito Stephen R - AI & Data Science Portfolio">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1055/1055687.png">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+body { margin:0; font-family:'Poppins'; background:#020617; color:#e2e8f0; }
+#particles-js { position:fixed; width:100%; height:100%; z-index:-1; }
+header { text-align:center; padding:100px 20px; }
+.btn { margin:10px; padding:12px 22px; border-radius:30px; background:#38bdf8; color:black; text-decoration:none; }
+section { padding:60px 20px; max-width:1100px; margin:auto; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px; }
+.card { background:#0f172a; padding:20px; border-radius:15px; }
+#chatbot { position:fixed; bottom:20px; right:20px; width:300px; background:#0f172a; border-radius:15px; }
+#chat-body { height:200px; overflow:auto; padding:10px; }
+</style>
+</head>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<body>
+<div id="particles-js"></div>
 
-  <style>
-    body { margin:0; font-family:'Poppins',sans-serif; background:#020617; color:#e2e8f0; }
-    #particles-js { position:fixed; width:100%; height:100%; z-index:-1; }
-    header { text-align:center; padding:100px 20px; }
-    h1 { font-size:3rem; }
+<header>
+<h1>Benito Stephen R</h1>
+<p>AI & Data Science Enthusiast</p>
 
-    .btn {
-      margin:10px; padding:12px 22px; border-radius:30px;
-      background:#38bdf8; color:black; text-decoration:none; font-weight:bold;
-      transition:0.3s;
-    }
-    .btn:hover { transform:scale(1.15); box-shadow:0 0 15px #38bdf8; }
+<a class="btn" href="https://github.com/benito-stephen" target="_blank">GitHub</a>
+<a class="btn" href="https://www.linkedin.com/in/benito-stephen-r-7983952a8" target="_blank">LinkedIn</a>
+<a class="btn" href="https://drive.google.com/file/d/1n1Ds3VyoWpYjAAOwV4doOue-8CvecdBQ/view" target="_blank">Resume</a>
+</header>
 
-    section { padding:60px 20px; max-width:1100px; margin:auto; }
-    h2 { color:#38bdf8; }
+<section>
+<h2>Projects</h2>
+<div class="grid">
 
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px; }
+<div class="card">
+<h3>AIFlix 2.0</h3>
+<a href="https://github.com/benito-stephen/AIFlix-2.0" target="_blank">View</a>
+</div>
 
-    .card {
-      background:#0f172a; padding:20px; border-radius:15px;
-      transition:0.3s; border:1px solid #1e293b;
-    }
-    .card:hover { transform:translateY(-12px); box-shadow:0 15px 30px rgba(56,189,248,0.4); }
+<div class="card">
+<h3>Air Pollution Prediction</h3>
+<a href="https://github.com/mackshema/pollution_prediction" target="_blank">View</a>
+</div>
 
-    footer { text-align:center; padding:20px; color:#64748b; }
+</div>
+</section>
 
-    /* Jarvis Chat */
-    #chatbot {
-      position:fixed; bottom:20px; right:20px; width:300px;
-      background:#0f172a; border-radius:15px; border:1px solid #1e293b;
-      overflow:hidden;
-    }
+<section>
+<h2>Skills</h2>
+<canvas id="skillsChart"></canvas>
+</section>
+
+<div id="chatbot">
+<div style="background:#38bdf8;color:black;padding:10px;">Jarvis AI</div>
+<div id="chat-body"></div>
+<input id="userInput" placeholder="Ask me anything..." style="width:70%">
+<button onclick="sendMessage()">Send</button>
+</div>
+
+<script>
+// particles
+particlesJS("particles-js",{particles:{number:{value:60},size:{value:3}}});
+
+// chart
+new Chart(document.getElementById('skillsChart'),{
+type:'bar',
+data:{labels:['Python','ML','Data','IoT'],datasets:[{data:[90,80,85,75]}]}
+});
+
+// 🔥 REAL AI CHATBOT
+async function sendMessage(){
+let input=document.getElementById("userInput").value;
+let chat=document.getElementById("chat-body");
+
+chat.innerHTML += "<p><b>You:</b> "+input+"</p>";
+
+let response=await fetch("https://api.openai.com/v1/chat/completions",{
+method:"POST",
+headers:{
+"Content-Type":"application/json",
+"Authorization":"Bearer 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"
+},
+body:JSON.stringify({
+model:"gpt-4o-mini",
+messages:[{role:"user",content:input}]
+})
+});
+
+let data=await response.json();
+let reply=data.choices[0].message.content;
+
+chat.innerHTML += "<p><b>Jarvis:</b> "+reply+"</p>";
+}
+</script>
+
+</body>
+</html>

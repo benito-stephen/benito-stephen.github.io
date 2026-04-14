@@ -247,19 +247,38 @@ new Chart(document.getElementById('skillsChart'), {
 
 // Safe Jarvis
 function sendMessage() {
-  let input = document.getElementById("userInput").value;
+  let input = document.getElementById("userInput").value.toLowerCase();
   let chat = document.getElementById("chat-body");
 
   let response = "I am Benito's AI assistant 🤖";
 
-  if (input.toLowerCase().includes("project"))
-    response = "Check the Projects section above!";
-  else if (input.toLowerCase().includes("skills"))
-    response = "Python, Machine Learning, Data Analysis, IoT";
-  else if (input.toLowerCase().includes("resume"))
-    response = "Use the Resume button at the top.";
-  else if (input.toLowerCase().includes("contact"))
-    response = "Connect via LinkedIn or GitHub.";
+  if (input.includes("who are you") || input.includes("about you")) {
+    response = "Benito Stephen R is an ECE student specializing in AI, Data Science, and IoT. He builds intelligent systems and works on real-world projects like AIFlix and pollution prediction.";
+  }
+
+  else if (input.includes("skills")) {
+    response = "Benito's skills include Python, Machine Learning, Data Analysis, and IoT systems.";
+  }
+
+  else if (input.includes("project")) {
+    response = "Benito has built AIFlix 2.0 (content recommendation system) and an Air Pollution Prediction system.";
+  }
+
+  else if (input.includes("resume")) {
+    response = "You can download Benito's resume using the button at the top.";
+  }
+
+  else if (input.includes("contact")) {
+    response = "You can connect with Benito through LinkedIn or GitHub links above.";
+  }
+
+  else if (input.includes("education")) {
+    response = "Benito is pursuing Electronics and Communication Engineering and has a Minor in AI from IIT Ropar.";
+  }
+
+  chat.innerHTML += "<p><b>You:</b> " + input + "</p>";
+  chat.innerHTML += "<p><b>Jarvis:</b> " + response + "</p>";
+}
 
   chat.innerHTML += "<p><b>You:</b> " + input + "</p>";
   chat.innerHTML += "<p><b>Jarvis:</b> " + response + "</p>";

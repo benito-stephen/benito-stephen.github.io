@@ -1,32 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Benito Stephen R | Elite Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Benito Stephen R | AI Portfolio</title>
 
-  <!-- SEO -->
   <meta name="description" content="Benito Stephen R - AI & Data Science Portfolio">
 
-  <!-- Favicon -->
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1055/1055687.png">
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <!-- Chart -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-  <!-- Particles -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
   <style>
-    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
       background: #020617;
       color: #e2e8f0;
+      scroll-behavior: smooth;
     }
 
     #particles-js {
@@ -38,15 +32,15 @@
 
     header {
       text-align: center;
-      padding: 80px 20px;
+      padding: 100px 20px;
     }
 
-    header h1 { font-size: 2.8rem; }
+    h1 { font-size: 3rem; }
 
     .btn {
       margin: 10px;
-      padding: 10px 20px;
-      border-radius: 25px;
+      padding: 12px 22px;
+      border-radius: 30px;
       background: #38bdf8;
       color: black;
       text-decoration: none;
@@ -55,13 +49,20 @@
     }
 
     .btn:hover {
-      transform: scale(1.1);
+      transform: scale(1.15);
+      box-shadow: 0 0 15px #38bdf8;
     }
 
     section {
-      padding: 50px 20px;
+      padding: 60px 20px;
       max-width: 1100px;
       margin: auto;
+      animation: fadeUp 1s ease;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     h2 { color: #38bdf8; }
@@ -81,14 +82,14 @@
     }
 
     .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 25px rgba(56,189,248,0.3);
+      transform: translateY(-12px);
+      box-shadow: 0 15px 30px rgba(56,189,248,0.4);
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background: #020617;
+      color: #64748b;
     }
   </style>
 </head>
@@ -103,30 +104,32 @@
 
   <a class="btn" href="https://github.com/benito-stephen" target="_blank">GitHub</a>
   <a class="btn" href="https://www.linkedin.com/in/benito-stephen-r-7983952a8" target="_blank">LinkedIn</a>
-  <a class="btn" href="YOUR_RESUME_LINK" target="_blank">Download Resume</a>
+  <a class="btn" href="https://drive.google.com/file/d/1n1Ds3VyoWpYjAAOwV4doOue-8CvecdBQ/view" target="_blank">Resume</a>
 </header>
 
 <section>
   <h2>About Me</h2>
   <p>
-    Passionate ECE student specializing in AI, Data Science, and IoT. 
-    I build intelligent systems and solve real-world problems using data-driven approaches.
+    Passionate ECE student specializing in Artificial Intelligence, Data Science, and IoT.
+    I design intelligent systems and solve real-world problems using machine learning and data-driven approaches.
   </p>
 </section>
 
 <section>
   <h2>Projects</h2>
   <div class="grid">
+
     <div class="card">
       <h3>AIFlix 2.0</h3>
-      <p>Advanced recommendation system using ML to personalize content based on mood.</p>
-      <a href="https://github.com/benito-stephen/AIFlix-2.0" target="_blank">GitHub</a>
+      <p>ML-based recommendation system that personalizes content based on user mood.</p>
+      <a href="https://github.com/benito-stephen/AIFlix-2.0" target="_blank">View GitHub</a>
     </div>
 
     <div class="card">
       <h3>Air Pollution Monitoring</h3>
-      <p>IoT-based system for real-time air quality analysis and insights.</p>
+      <p>IoT-based system for real-time air quality tracking and environmental analysis.</p>
     </div>
+
   </div>
 </section>
 
@@ -137,7 +140,7 @@
 
 <section>
   <h2>GitHub Stats</h2>
-  <img src="https://github-readme-stats.vercel.app/api?username=benito-stephen&show_icons=true" width="100%">
+  <img src="https://github-readme-stats.vercel.app/api?username=benito-stephen&show_icons=true&theme=tokyonight" width="100%">
 </section>
 
 <section>
@@ -178,11 +181,10 @@
 </section>
 
 <footer>
-  <p>© 2026 Benito Stephen R | Built with ❤️</p>
+  <p>© 2026 Benito Stephen R | Built like Iron Man ⚡</p>
 </footer>
 
 <script>
-// Particles
 particlesJS("particles-js", {
   particles: {
     number: { value: 80 },
@@ -190,7 +192,6 @@ particlesJS("particles-js", {
   }
 });
 
-// Chart
 const ctx = document.getElementById('skillsChart');
 new Chart(ctx, {
   type: 'bar',

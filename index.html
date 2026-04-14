@@ -4,61 +4,114 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Benito Stephen R | Elite Portfolio</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Benito Stephen R - AI & Data Science Portfolio">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1055/1055687.png">
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Chart -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Particles -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
   <style>
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #020617, #0f172a);
+      background: #020617;
       color: #e2e8f0;
     }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
     header {
       text-align: center;
-      padding: 70px 20px;
-      background: radial-gradient(circle at top, #1e293b, #020617);
+      padding: 80px 20px;
     }
+
     header h1 { font-size: 2.8rem; }
+
     .btn {
       margin: 10px;
       padding: 10px 20px;
       border-radius: 25px;
       background: #38bdf8;
-      color: #020617;
+      color: black;
       text-decoration: none;
       font-weight: bold;
+      transition: 0.3s;
     }
-    section { padding: 50px 20px; max-width: 1100px; margin: auto; }
+
+    .btn:hover {
+      transform: scale(1.1);
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
     h2 { color: #38bdf8; }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 20px;
     }
+
     .card {
-      background: #020617;
+      background: #0f172a;
       padding: 20px;
       border-radius: 15px;
       transition: 0.3s;
       border: 1px solid #1e293b;
     }
-    .card:hover { transform: scale(1.05); }
-    footer { text-align: center; padding: 20px; background: #020617; }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(56,189,248,0.3);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+    }
   </style>
 </head>
+
 <body>
+
+<div id="particles-js"></div>
 
 <header>
   <h1>Benito Stephen R</h1>
   <p>AI & Data Science Enthusiast</p>
+
   <a class="btn" href="https://github.com/benito-stephen" target="_blank">GitHub</a>
   <a class="btn" href="https://www.linkedin.com/in/benito-stephen-r-7983952a8" target="_blank">LinkedIn</a>
+  <a class="btn" href="YOUR_RESUME_LINK" target="_blank">Download Resume</a>
 </header>
 
 <section>
   <h2>About Me</h2>
-  <p>Passionate ECE student specializing in AI, Data Science, and IoT. I build intelligent systems and enjoy solving real-world problems using data-driven approaches.</p>
+  <p>
+    Passionate ECE student specializing in AI, Data Science, and IoT. 
+    I build intelligent systems and solve real-world problems using data-driven approaches.
+  </p>
 </section>
 
 <section>
@@ -67,8 +120,9 @@
     <div class="card">
       <h3>AIFlix 2.0</h3>
       <p>Advanced recommendation system using ML to personalize content based on mood.</p>
-      <a href="https://github.com/benito-stephen/AIFlix-2.0" target="_blank">View Project</a>
+      <a href="https://github.com/benito-stephen/AIFlix-2.0" target="_blank">GitHub</a>
     </div>
+
     <div class="card">
       <h3>Air Pollution Monitoring</h3>
       <p>IoT-based system for real-time air quality analysis and insights.</p>
@@ -82,32 +136,72 @@
 </section>
 
 <section>
+  <h2>GitHub Stats</h2>
+  <img src="https://github-readme-stats.vercel.app/api?username=benito-stephen&show_icons=true" width="100%">
+</section>
+
+<section>
   <h2>Certifications</h2>
   <div class="grid">
-    <div class="card"><a href="https://drive.google.com/file/d/1nyshjCDEJc63ptHyiHfykrc8d27NK4OD/view" target="_blank">Certificate 1</a></div>
-    <div class="card"><a href="https://drive.google.com/file/d/1AypvHffkghhgPTJx27FzmpRcg7g7Tboe/view" target="_blank">Certificate 2</a></div>
-    <div class="card"><a href="https://drive.google.com/file/d/1JLUoJZKu64369phfVHTrHyGJ23CHvXt9/view" target="_blank">Certificate 3</a></div>
-    <div class="card"><a href="https://drive.google.com/file/d/1THkpqgsMK9fkVl9GFH_-ms8RvFuMedaP/view" target="_blank">Certificate 4</a></div>
-    <div class="card"><a href="https://drive.google.com/file/d/13HLXsNqLvD9SGfDrdUDlCzIRYuMwzf34/view" target="_blank">Certificate 5</a></div>
+
+    <div class="card">
+      <a href="https://drive.google.com/file/d/1nyshjCDEJc63ptHyiHfykrc8d27NK4OD/view" target="_blank">
+        NPTEL IoT – Elite + Silver
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="https://drive.google.com/file/d/1AypvHffkghhgPTJx27FzmpRcg7g7Tboe/view" target="_blank">
+        NPTEL Cloud Computing – Elite
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="https://drive.google.com/file/d/1JLUoJZKu64369phfVHTrHyGJ23CHvXt9/view" target="_blank">
+        Python for Data Science – SRM
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="https://drive.google.com/file/d/1THkpqgsMK9fkVl9GFH_-ms8RvFuMedaP/view" target="_blank">
+        GATE 2026 Scorecard
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="https://drive.google.com/file/d/13HLXsNqLvD9SGfDrdUDlCzIRYuMwzf34/view" target="_blank">
+        Additional Certification
+      </a>
+    </div>
+
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Benito Stephen R</p>
+  <p>© 2026 Benito Stephen R | Built with ❤️</p>
 </footer>
 
 <script>
-  const ctx = document.getElementById('skillsChart');
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ['Python', 'ML', 'Data Analysis', 'IoT'],
-      datasets: [{
-        label: 'Skill Level',
-        data: [90, 80, 85, 75]
-      }]
-    }
-  });
+// Particles
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80 },
+    size: { value: 3 }
+  }
+});
+
+// Chart
+const ctx = document.getElementById('skillsChart');
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['Python', 'ML', 'Data Analysis', 'IoT'],
+    datasets: [{
+      label: 'Skill Level',
+      data: [90, 80, 85, 75]
+    }]
+  }
+});
 </script>
 
 </body>

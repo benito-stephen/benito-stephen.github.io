@@ -246,43 +246,44 @@ new Chart(document.getElementById('skillsChart'), {
 });
 
 // Safe Jarvis
+<script>
 function sendMessage() {
-  let input = document.getElementById("userInput").value.toLowerCase();
+  let inputBox = document.getElementById("userInput");
   let chat = document.getElementById("chat-body");
 
-  let response = "I am Benito's AI assistant 🤖";
+  let input = inputBox.value.trim();
 
-  if (input.includes("who are you") || input.includes("about you")) {
-    response = "Benito Stephen R is an ECE student specializing in AI, Data Science, and IoT. He builds intelligent systems and works on real-world projects like AIFlix and pollution prediction.";
-  }
+  if (input === "") return; // prevent empty message
 
-  else if (input.includes("skills")) {
-    response = "Benito's skills include Python, Machine Learning, Data Analysis, and IoT systems.";
-  }
+  let response = "";
 
-  else if (input.includes("project")) {
-    response = "Benito has built AIFlix 2.0 (content recommendation system) and an Air Pollution Prediction system.";
-  }
+  let text = input.toLowerCase();
 
-  else if (input.includes("resume")) {
-    response = "You can download Benito's resume using the button at the top.";
-  }
-
-  else if (input.includes("contact")) {
-    response = "You can connect with Benito through LinkedIn or GitHub links above.";
-  }
-
-  else if (input.includes("education")) {
-    response = "Benito is pursuing Electronics and Communication Engineering and has a Minor in AI from IIT Ropar.";
+  if (text.includes("who") || text.includes("about")) {
+    response = "Benito Stephen R is an ECE student focused on AI, Data Science, and IoT. He builds intelligent systems like AIFlix and pollution prediction.";
+  } 
+  else if (text.includes("skills")) {
+    response = "Python, Machine Learning, Data Analysis, IoT.";
+  } 
+  else if (text.includes("project")) {
+    response = "Projects include AIFlix 2.0 and Air Pollution Prediction system.";
+  } 
+  else if (text.includes("resume")) {
+    response = "Click the Resume button at the top.";
+  } 
+  else if (text.includes("contact")) {
+    response = "Use LinkedIn or GitHub links above.";
+  } 
+  else {
+    response = "I'm Jarvis 🤖. Ask me about skills, projects, or education.";
   }
 
   chat.innerHTML += "<p><b>You:</b> " + input + "</p>";
   chat.innerHTML += "<p><b>Jarvis:</b> " + response + "</p>";
-}
 
-  chat.innerHTML += "<p><b>You:</b> " + input + "</p>";
-  chat.innerHTML += "<p><b>Jarvis:</b> " + response + "</p>";
+  inputBox.value = ""; // clear input
 }
+</script>
 </script>
 
 </body>
